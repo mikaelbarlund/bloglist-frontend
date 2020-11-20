@@ -46,7 +46,7 @@ const App = () => {
       showNotification('wrong credentials', true)
     }
   }
-  const handleLogout = async (event) => {
+  const handleLogout = async () => {
     window.localStorage.clear()
     blogService.setToken(null)
     setUser(null)
