@@ -73,7 +73,6 @@ const App = () => {
   )
   const blogList = () => (
     <>
-      <h2>blogs</h2>
       <p>{user.name} logged in <button onClick={handleLogout}>logout</button></p>
 
       <Togglable buttonLabel="create new blog" ref={blogFormRef}>
@@ -88,11 +87,14 @@ const App = () => {
 
   return (
     <div>
+      <h1>blogs</h1>
       <Notification notification={notification} />
       {user === null ?
         loginForm() :
         blogList()
       }
+      <div>blogs app, Mikael Bärlund, mooc fullstackopen 2020
+      </div>
     </div>
   )
 }
