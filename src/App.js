@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import Blog from './components/Blog'
+import Blogs from './components/Blogs'
 import Login from './components/Login'
 import Togglable from './components/Togglable'
 import BlogForm from './components/BlogForm'
@@ -81,9 +81,7 @@ const App = () => {
         <BlogForm createBlog={addBlog} />
       </Togglable>
       <>
-        {blogs.map(blog =>
-          <Blog showNotification={showNotification} setBlogs={setBlogs} key={blog.id} blog={blog} />
-        )}
+        <Blogs blogs={blogs} showNotification={showNotification} setBlogs={setBlogs} />
       </>
     </>
   )
